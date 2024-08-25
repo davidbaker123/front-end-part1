@@ -39,3 +39,51 @@ export class CategoriesListComponent implements OnInit {
       }});
   }
 }
+
+// קומפוננטה חדשה
+// loading-update-form:
+
+// export class LoadingUpdateFormComponent {
+//   @Input() progressValue = 0;
+// }
+// we need to add to imports:[MatProgressBarMoudle]
+
+// Html Component:
+// <mat-progress-bar class="custom-progress-bar" mode="determinate" [value]="progressValue"></mat-progress-bar>
+
+// ts componenet הראשית לקישוריות
+// משתנים:
+// progressValue = 0;
+// isSubmitting = false;
+
+// הוספת פונקציה להגדרת הטעינה
+// incrementProgress(){
+//   const interval = setInterval(()=>{
+//     if(this.progressValue < 100){
+//       this.progressValue +=25;
+//     }else {
+//       clearInterval(interval);
+//       this.isSubmitting = false;
+//     }
+//   }, 200);
+// }
+
+// הוספת אינדיקציה על כתפור השמירה
+// OnSubmitRegistion(){
+//   console.log('Form submitted!');
+//   this.isSubmitting = true;
+//   if(this.id){
+//     this.personService.update(this.currentPerson);
+//   }else{
+//     this.personService.add(this.currentPerson);
+//   }
+//   this.incrementProgress();
+// }
+
+// הוספת Imports:
+// MatProgressBarMoudle,LodingUpdateFormComponent
+
+// הוספת האלנמט לHTML
+//  <app-loding-update-form> *ngif="isSubmintting" [progressValue]="progressValue"></app-loding-update-form>
+
+

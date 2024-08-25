@@ -1,20 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
 import { Category } from '../../shared/model/category';
 import { CategoriesService } from '../services/categories.service';
 
 @Component({
-  selector: 'app-game2',
+  selector: 'app-mixed-letters-game',
   standalone: true,
   imports: [
-    CommonModule,
+    CommonModule,RouterLink,RouterModule,MatToolbarModule,
   ],
-  templateUrl: './game2.component.html',
-  styleUrl: './game2.component.css',
+  templateUrl: './mixed-letters-game.component.html',
+  styleUrl: './mixed-letters-game.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Game2Component implements OnInit {
+export class MixedLettersGameComponent {
   category?: Category;
 
   constructor(
@@ -26,4 +27,13 @@ export class Game2Component implements OnInit {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.category = this.categoriesService.get(id);
   }
-}
+ }
+
+
+
+
+ 
+
+
+
+

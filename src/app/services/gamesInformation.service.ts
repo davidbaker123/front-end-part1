@@ -7,8 +7,8 @@ import { GameProfile } from '../../shared/model/gameProfile';
 })
 export class GameProfileService {
   private games: GameProfile[] = [
-    new GameProfile(1, 'Word Sorting', 'Word sorting game', 'game1/:id'),
-    new GameProfile(2, 'Word Mess', 'Word mess game', 'game2/:id')
+    new GameProfile(1, 'Mixed Letters', 'Mixed Letters game', 'mixedlettersgame/:id'),
+    new GameProfile(2, 'Maching Letters', 'Word Maching game', 'machinggame/:id')
   ];
 
   constructor() {}

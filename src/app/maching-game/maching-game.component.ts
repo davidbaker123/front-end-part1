@@ -1,22 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Category } from '../../shared/model/category';
 import { CategoriesService } from '../services/categories.service';
 
 @Component({
-  selector: 'app-game1',
+  selector: 'app-maching-game',
   standalone: true,
   imports: [
-    CommonModule,RouterLink,RouterModule,MatToolbarModule,
+    CommonModule,
   ],
-  templateUrl: './game1.component.html',
-  styleUrl: './game1.component.css',
+  templateUrl: './maching-game.component.html',
+  styleUrl: './maching-game.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Game1Component implements OnInit {
-  category?: Category;
+export class MachingGameComponent { 
+category?: Category;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,3 +27,8 @@ export class Game1Component implements OnInit {
     this.category = this.categoriesService.get(id);
   }
 }
+
+
+
+
+
